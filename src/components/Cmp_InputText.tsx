@@ -5,6 +5,7 @@ interface Cmp_InputTextProps {
   placeholder?: string;
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onKeyDown?: (e: React.KeyboardEvent<HTMLInputElement>) => void;
   label?: string;
   id?: string;
 }
@@ -14,6 +15,7 @@ export function Cmp_InputText({
   placeholder, 
   value, 
   onChange,
+  onKeyDown,
   label,
   id
 }: Cmp_InputTextProps) {
@@ -30,6 +32,7 @@ export function Cmp_InputText({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        onKeyDown={onKeyDown}
         className="w-full px-4 py-3 bg-white border border-[#E0E0E0] text-[#1A1A1A] placeholder:text-[#999999] focus:outline-none focus:border-[#6B7532] transition-colors"
         style={{ borderRadius: '4px' }}
       />
